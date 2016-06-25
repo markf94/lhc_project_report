@@ -22,12 +22,12 @@
 \usepackage{apacite}
 \usepackage{feynmp}
 \DeclareGraphicsRule{*}{mps}{*}{}
-
 \usepackage[compat=1.1.0]{tikz-feynman}
 
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
 \usepackage{parskip}
+\usepackage{cancel}
 
 \usepackage{url}
 \urldef{\mailsa}\path|{a.garayjalloh, d.gowdastorz, |
@@ -100,9 +100,9 @@ This report discusses data collected from the ATLAS detector in 2012, which was 
 
 \subsection{The LHC and ATLAS}
 
-ATLAS, A Toroidal LHC Apparatus, is one of the four main particle detectors located along the LHC, where proton collision experiments are conducted. Two high-energy particle beams, each with 2808 bunches of ${10}_{11}$ protons, travel through the accelerator close to the speed of light in an ultrahigh vacuum (${10}_{?13}$ atm) and at a temperature of $-271.3$�C in opposite direction. The two beams are aligned to collide inside the ATLAS detector, which uses a large array of detectors organised in cylindrical shells to measure the properties of the particles passing through them. 
+ATLAS, A Toroidal LHC Apparatus, is one of the four main particle detectors located along the LHC, where proton collision experiments are conducted. Two high-energy particle beams, each with 2808 bunches of ${10}_{11}$ protons, travel through the accelerator close to the speed of light in an ultrahigh vacuum (${10}_{–13}$ atm) and at a temperature of $-271.3$°C in opposite direction. The two beams are aligned to collide inside the ATLAS detector, which uses a large array of detectors organised in cylindrical shells to measure the properties of the particles passing through them. 
 
-Each layer of the detector reconstructs different particles. The first layer consists of tracking devices, which show the tracks of electrically charged particles through the trails they leave by ionizing matter. The particle?s momentum can be determined by measuring the curvature of the trajectory. Tracking devices either consist of a gaseous chamber or a semiconductor detector. In gaseous chambers, electrons or ions are collected on electrodes under a strong electric field, whereas semiconductor detectors are based on the fact that electron-hole pairs are created when particles pass through a reverse-biased semiconductor. The next layer of the detector is an electromagnetic calorimeter. This absorbs all electrons and photons, which have electromagnetic properties. Hadrons begin to lose energy in this stage, but are not stopped until they reach the hadronic calorimeter. The final layer of the detector catches muons. See Fig. \ref{fig:atlas} for a schematic overview. \cite{aad2012observation}
+Each layer of the detector reconstructs different particles. The first layer consists of tracking devices, which show the tracks of electrically charged particles through the trails they leave by ionizing matter. The particle’s momentum can be determined by measuring the curvature of the trajectory. Tracking devices either consist of a gaseous chamber or a semiconductor detector. In gaseous chambers, electrons or ions are collected on electrodes under a strong electric field, whereas semiconductor detectors are based on the fact that electron-hole pairs are created when particles pass through a reverse-biased semiconductor. The next layer of the detector is an electromagnetic calorimeter. This absorbs all electrons and photons, which have electromagnetic properties. Hadrons begin to lose energy in this stage, but are not stopped until they reach the hadronic calorimeter. The final layer of the detector catches muons. See Fig. \ref{fig:atlas} for a schematic overview. \cite{aad2012observation}
 
 \begin{figure}
 \centering
@@ -131,7 +131,7 @@ Leptons are also arranged in three generations (1st column 1st generation, etc.)
 
 Weak, electromagnetic and strong forces result from the exchange of force-carrier particles, which are all bosons. The strong force is carried by the gluon, electromagnetic force by photon and weak force by W and Z bosons.
 
-The Higgs boson is one of the most recent discoveries in the field of particle physics and It has been postulated that its interaction with the Higgs field creates a ?friction? on the particle. This friction limits the particle?s energy so that it can no longer travel at the speed of light, and consequently creates mass. \cite{melnikov2010w+}
+The Higgs boson is one of the most recent discoveries in the field of particle physics and It has been postulated that its interaction with the Higgs field creates a “friction” on the particle. This friction limits the particle’s energy so that it can no longer travel at the speed of light, and consequently creates mass. \cite{melnikov2010w+}
 
 \textbf{Mathematics behind the measurements}
 
@@ -153,7 +153,7 @@ When searching for particular signals (for example, two bosons decaying into fou
 
 %% DHRUVA START
 As the Large Hadron Collider accellerates particles close to the speed of light, it leaves the territory of classical mechanics and enters that of relativity. This manifests mathematically and provides new tools to calculate and predict important features of a collision. One of the most elementary changes brought about by this change is the use of 4-vectors instead of 3-vectors \cite{griffithsintroduction}. 3-vectors as used in classical mechanics only have three components which represent the x, the y and the z axes. 4 vectors on the other hand, while still representing the same thing as its counterpart 3-vector, make use of time as their 0th component. The time component is multiplied by the speed of light to give it the same units as the other components. 
-4 vectors are useful as the momentum 4 vector makes it relatively straightforward to do momentum calculations in collisions. The momentum 4-vector has energy as its 0th component, which proves extremely useful due to Einstein?s famous equation 
+4 vectors are useful as the momentum 4 vector makes it relatively straightforward to do momentum calculations in collisions. The momentum 4-vector has energy as its 0th component, which proves extremely useful due to Einstein’s famous equation 
 
 \begin{equation}
 { E }^{ 2 }\quad ={ \quad (pc) }^{ 2 }\quad +\quad { (m{ c }^{ 2 }) }^{ 2 }
@@ -165,13 +165,13 @@ In order to reconstruct events, we first and foremost need data. What data we ne
 
 The Invariant Mass or relativistic mass needs to be introduced as mass changes as a particle accelerates. The invariant mass is the mass of a body at rest \cite{helliwell2010special}. The mass at a certain velocity can then be calculated by transforming the rest mass by a factor of gamma. In a decay, invariant mass is conserved, so it can be used to reconstruct the mass of the decaying particle. It is assumed in most cases that the total mass of the fragments of a decay is equal to the mass of the decaying particle. Off-shell particles and relativistic masses provide exceptions to this, but a histogram of the total invariant mass often results in a bell curve with a peak at the mass of the decaying particle. 
 
-Sometimes, one encounters a case where the momenta of the fragments dont add up to that of the colliding particles. This manifests itself as missing transverse energy. This phenomenon is due to the production of particles that cannot be detected by the detectors. A prime example is the neutrino, which is capable of passing through large bodies of matter without interacting with it. Neutrino production is observed quite often in several phenomenon such as in W decays. By calculating exactly how much energy is missing in the collision, one can use the missing energy as a value for the invariant mass of the produced neutrino and carry out calculations to recreate the original decay from this information. Since the actual mass of the neutrino is not known, we can calculate a reconstructed mass for the decaying particle (the W boson in this case). This mass is known as the reconstructed mass or m?. As an example to illustrate this, the formula \cite{http://physics.stackexchange.com_13ADAD} to calculate the reconstructed transverse mass of a W boson is as follows 
+Sometimes, one encounters a case where the momenta of the fragments dont add up to that of the colliding particles. This manifests itself as missing transverse energy. This phenomenon is due to the production of particles that cannot be detected by the detectors. A prime example is the neutrino, which is capable of passing through large bodies of matter without interacting with it. Neutrino production is observed quite often in several phenomenon such as in W decays. By calculating exactly how much energy is missing in the collision, one can use the missing energy as a value for the invariant mass of the produced neutrino and carry out calculations to recreate the original decay from this information. Since the actual mass of the neutrino is not known, we can calculate a reconstructed mass for the decaying particle (the W boson in this case). This mass is known as the reconstructed mass or mτ. As an example to illustrate this, the formula \cite{http://physics.stackexchange.com_13ADAD} to calculate the reconstructed transverse mass of a W boson is as follows 
 
 \begin{equation}
 { m }_{ T }\quad =\quad \sqrt { 2{ p }_{ T }^{ l }{ p }_{ T }^{ v }(1-cos\Delta { \phi  }_{ lv }) }
 \end{equation}
  
-where ${ p }_{ T }^{ l }$ represents the momentum of the lepton, ${ p }_{ T }^{ v }$ represents the momentum of the neutrino (which is assumed to be the missing energy), and $\Delta { \phi  }_{ lv }$ represents the angle between the lepton and the neutrino?s trajectory. 
+where ${ p }_{ T }^{ l }$ represents the momentum of the lepton, ${ p }_{ T }^{ v }$ represents the momentum of the neutrino (which is assumed to be the missing energy), and $\Delta { \phi  }_{ lv }$ represents the angle between the lepton and the neutrino’s trajectory. 
 
 %% DHRUVA END
 
@@ -181,7 +181,7 @@ where ${ p }_{ T }^{ l }$ represents the momentum of the lepton, ${ p }_{ T }^{ 
 
 Particle physics is highly dependent on competent programming and software engineering to make sense of the quantum world that scientists seek to explore. Programming is a vastly adaptable and versatile tool that enables data collection, storage, management, modelling, analysis, plotting and fitting.
 
-This project utilized Ubuntu, which is a Linux operating system, for managing the large sums of data from ATLAS in a more hands-on, customizable environment. It was necessary to install an OS with a C++ compiler in order to run a piece of code that processed all the events in a number of selected datasets. This processed data could then be graphed in Histograms allowing for further analytical processing. The programming environment ?terminal? was used, which is a command-line window that compiles C++. C++ is a useful language in this scenario as it allows for classes to inherit properties from their base class. For example, the class Z Boson extends the base class Boson and therefore inherits an integer only spin.
+This project utilized Ubuntu, which is a Linux operating system, for managing the large sums of data from ATLAS in a more hands-on, customizable environment. It was necessary to install an OS with a C++ compiler in order to run a piece of code that processed all the events in a number of selected datasets. This processed data could then be graphed in Histograms allowing for further analytical processing. The programming environment ‘terminal’ was used, which is a command-line window that compiles C++. C++ is a useful language in this scenario as it allows for classes to inherit properties from their base class. For example, the class Z Boson extends the base class Boson and therefore inherits an integer only spin.
 
 In most cases the events that occur in the LHC are very unpredictable processes and often only part of the entire process is recorded by the particle detectors. For this reason, Monte-Carlo simulation methods are used to model and infer the outcomes of the full range of processes. These simulate the conditions and parameters that are conducive for new-physics processes and shows scientists what to expect when the actual data is collected.
 
@@ -191,11 +191,11 @@ In most cases the events that occur in the LHC are very unpredictable processes 
 
 \subsection{Statistics}
 
-New events are observed continuously, but in order to identify whether these new effects are significant or not to the Standard Model a key requirement is to propose a null hypothesis, stating that there are no fluctuations in the data set, and an alternative hypothesis, that there has been a fluctuations in the data set. In the interest of finding new particles the null hypothesis must be rejected, hence the event selected will be found in the tail of the distribution. In other words significance is the probability that by mistake one rejects the null hypothesis. Typically a 5? value is used to assess the confidence level, p-value, of the data collection. In high energy physics (HED) the selection of a steep confidence level is done to distinguish whether it is a measurement (5 ?), an observation (a p-value of 4? is needed) or if there is evidence (a p-value of 3? is needed) for the event taking place if more time were invested in the researched of this physical effect. (http://www.hep.caltech.edu/~fcp/statistics/lectures0802/L0802B.pdf)
+New events are observed continuously, but in order to identify whether these new effects are significant or not to the Standard Model a key requirement is to propose a null hypothesis, stating that there are no fluctuations in the data set, and an alternative hypothesis, that there has been a fluctuations in the data set. In the interest of finding new particles the null hypothesis must be rejected, hence the event selected will be found in the tail of the distribution. In other words significance is the probability that by mistake one rejects the null hypothesis. Typically a 5σ value is used to assess the confidence level, p-value, of the data collection. In high energy physics (HED) the selection of a steep confidence level is done to distinguish whether it is a measurement (5 σ), an observation (a p-value of 4σ is needed) or if there is evidence (a p-value of 3σ is needed) for the event taking place if more time were invested in the researched of this physical effect. (http://www.hep.caltech.edu/~fcp/statistics/lectures0802/L0802B.pdf)
 
 To perform more meaningful significance estimates a blind analysis approach is usually always conducted, in essence designing the analysis before a glimpse is even taken into the results. The reason is to handle the data in this manner is to already know the specific cuts to make so reducing the possibility of the wanted or another interesting signal which in the future might be an interesting background.  The cuts are picked following the extensive data provided by MonteCarlo simulations, the already known background processes and furthermore QED behaviors involved with the physical variable under consideration which may have led to a systematic error.
  
-The level of significance, how well the cuts were carried out, is given by the score function. The score function is defined as ?the sum of the background events, B, and the score function, S, will be equal to the total number of events, N. Hence:
+The level of significance, how well the cuts were carried out, is given by the score function. The score function is defined as “the sum of the background events, B, and the score function, S, will be equal to the total number of events, N. Hence:
 
 \begin{equation}
 S = N - B
@@ -212,19 +212,24 @@ Therefore the uncertainty of S will be the following:
 
 \subsection{Z Decay}
 
-Being the heavy analog of the photon, the neutral Z boson has a mass of $m_{Z}\cong91 GeV$ and a cross-section of $\Gamma_{Z}\cong2.5 GeV$. It decays either hadronically or leptonically with a very short half life of $\tau = 1/\Gamma\cong{ 10 }^{ -25 }sec$.\linebreak
-\linebreak
+Being the heavy analog of the photon, the neutral Z boson has a mass of $m_{Z}\cong91.2 GeV$ and a cross-section of $\Gamma_{Z}\cong2.5 GeV$. It decays either hadronically or leptonically with a very short half life of $\tau = 1/\Gamma\cong{ 10 }^{ -25 }sec$. This analysis will focus on the leptonic decay mode into two oppositely charged leptons of same flavour as shown in the Feynman diagram in Fig. \ref{fig:feynmzll}.
+
+\begin{figure}
+\centering
+\includegraphics[height=2.5cm]{feynm_Z}
+\caption{Feynman diagram for ${Z}^{0}$ decay}
+\label{fig:feynmzll}
+\end{figure}
+
 For the single Z analysis the following search criteria were employed:
 \begin{itemize}
-\item Two good leptons with ${p}_{T} > 25 GeV$
+\item Two good leptons with ${p}_{T} > 25$ GeV
 \item Leptons must have opposite charge
 \item Leptons were required to have same flavour
 \end{itemize}
 \bigbreak
-
 \textbf{$Z \quad \rightarrow \quad { e }^{ - } \quad + \quad { e }^{ + }$}
-\smallbreak
-%Feynman diagram here
+
 The Zee process is one of the main background processes when trying to extract events with two electrons in their final state since it has a relatively high cross section. In order to filter specifically for Zee processes the two good leptons were required to be of lepton type 11, which stands for electrons. The results of running this search on the Zee Monte-Carlo simulation are shown below. Fig. \ref{fig:invmzee} plots the frequency distribution against mass (GeV) and a distinct peak at $\sim$90 GeV can be seen, which is a good estimate for the Z mass.
 
 \begin{figure}
@@ -263,7 +268,7 @@ Since the Z boson can decay into any two leptons of the same flavour, the decay 
 \label{fig:invmzmumu}
 \end{figure}
 
-Fig. \ref{fig:mtezmumu} shows the MTE histogram, which demonstrates that there is much less MTE in Zmumu processes compared to Zee processes. After a small peak at 30 GeV the MTE frequency rapidly approaches zero and all MTE is found below 100 GeV. Since there are no neutrinos involved in the Zmumu decay process, no MTE is expected and, hence, the entire MET in Zee and Zmumu processes is considered ?fake? MTE. This special type of MTE is attributed to wrong measurements and errors such as incorrectly classifying jet energy as MTE. A distinct feature of ?fake? MTE is its fast convergence to zero and the resulting small tails in the MTE histogram as seen in Fig. \ref{fig:mtezmumu}.
+Fig. \ref{fig:mtezmumu} shows the MTE histogram, which demonstrates that there is much less MTE in Zmumu processes compared to Zee processes. After a small peak at 30 GeV the MTE frequency rapidly approaches zero and all MTE is found below 100 GeV. Since there are no neutrinos involved in the Zmumu decay process, no MTE is expected and, hence, the entire MET in Zee and Zmumu processes is considered “fake” MTE. This special type of MTE is attributed to wrong measurements and errors such as incorrectly classifying jet energy as MTE. A distinct feature of “fake” MTE is its fast convergence to zero and the resulting small tails in the MTE histogram as seen in Fig. \ref{fig:mtezmumu}.
 
 \begin{figure}
 \centering
@@ -272,7 +277,7 @@ Fig. \ref{fig:mtezmumu} shows the MTE histogram, which demonstrates that there i
 \label{fig:mtezmumu}
 \end{figure}
 
-When incorrectly measured jet energy is indeed the cause of the MTE distribution obtained in Fig. \ref{fig:mtezmumu}, it expected that the MTE vector will mostly point in the  direction of the most energetic jet. Therefore, when calculating the difference in azimuthal angle between the MTE vector and the most energetic jet, by definition given by the ${0}^{th}$ entry in the jet\_phi vector, a decreasing frequency distribution is expected with increasing radians. This prediction is verified by the histogram shown in Fig. \ref{fig:deltaphizmumu}. Oscillations are visible in the frequency distribution but no distinct linear increase with radians can be observed. To verify these result the azimuthal angular differences between the second most energetic jets and the MTE vectors were computed and are demonstrated in Fig. 7. Again no increase with radians is observed which implies that the ?fake? MTE shown in Fig. \ref{fig:mtezmumu} is probably due to other reasons than incorrectly measured jet energy.
+When incorrectly measured jet energy is indeed the cause of the MTE distribution obtained in Fig. \ref{fig:mtezmumu}, it expected that the MTE vector will mostly point in the  direction of the most energetic jet. Therefore, when calculating the difference in azimuthal angle between the MTE vector and the most energetic jet, by definition given by the ${0}^{th}$ entry in the jet\_phi vector, a decreasing frequency distribution is expected with increasing radians. This prediction is verified by the histogram shown in Fig. \ref{fig:deltaphizmumu}. Oscillations are visible in the frequency distribution but no distinct linear increase with radians can be observed. To verify these result the azimuthal angular differences between the second most energetic jets and the MTE vectors were computed and are demonstrated in Fig. 7. Again no increase with radians is observed which implies that the “fake” MTE shown in Fig. \ref{fig:mtezmumu} is probably due to other reasons than incorrectly measured jet energy.
 
 \begin{figure}
 \centering
@@ -280,32 +285,12 @@ When incorrectly measured jet energy is indeed the cause of the MTE distribution
 \caption{Distribution of angular difference in azimuthal angle plotted against radians}
 \label{fig:deltaphizmumu}
 \end{figure}
-
-$Z\quad \rightarrow \quad \tau ^{ - }\quad +\quad { \tau  }^{ + }$
 \bigbreak
+$Z\quad \rightarrow \quad \tau ^{ - }\quad +\quad { \tau  }^{ + }$
+
 Besides decaying into electrons and muons, the Z boson can also decay into two tau leptons. However, since tau leptons are very heavy compared to electrons and muons, their cross section and contribution to the background will be relatively low. Furthermore, searching for tau leptons requires much more sophisticated reconstruction methods and it is therefore much more difficult than searching electrons and muons in the final states. Due to all these reasons this decay mode was not searched and analysed further in this paper.
 
 %% MARK END
-
-%% DHRUVA START
-\subsection{WZ decay}
-
-WZ analysis searches for the presence of both a W and a Z boson decaying into three leptons. This process is interesting because it is a probe for triple gauge couplings. To search for the process, the following criteria were used: 
-
-- There are exactly three good leptons with pT > 25 GeV;
-- WZ candidate is chosen by finding the Z boson candidate closest to the nominal Z
-mass
-- |mass lepton pair - mass Z | < 10 GeV
-- Reconstructed transverse mass W > 30 GeV.
-
-For more details on how these criteria were implemented, see the WZ section of code in the appendix. 
-In the WZ analysis, the W boson produces a lepton and a neutrino and the Z boson produces two leptons. The mass of the Z boson can therefore be inferred from the sum of the mass of the two leptons identified as the ones that came from the Z boson, and the W mass can be reconstructed using equation 2.
-The results clearly show that the invariant mass graph peaks at around the 90 GeV bin, which corresponds to the mass of a Z boson which is measured to be 91.1876 /citep{beringer et al. _2012}. The reconstructed mass graph peaks at the 80 GeV bin, which also corresponds to the mass of a W boson which was measured to be 80.385 /citep{beringer et al. _2013}. Therefore, the analysis clearly selects the correct decay mode. 
-Out of all the run 1 data obtained from CERN, only 857 events satisfied the selection criteria. This low value agrees with the 
-
-%% DHRUVA END
-
-
 %% ANN START
 \subsection{ZZ Decay}
 
@@ -346,6 +331,67 @@ The number of jets were also plotted, and resulted in a very low number which ca
 \label{fig:nojzz}
 \end{figure}
 %%ANN END
+
+%%MARK START
+\subsection{W Analysis}
+
+The spin-1 ${W}^{+}$ and ${W}^{-}$ are the only charged bosons in the Standard Model and together with the neutral Z boson they mediate the weak interaction. W bosons have a mass of $m_{W}\cong 80.4 GeV$ and a cross-section of $\Gamma_{Z}\cong2.1 GeV$. With a branching fraction of $\sim67\%$ the W boson mostly decays hadronically, however, this analysis will only focus on the leptonic decay with $\sim11\%$ branching fraction for each lepton generation \cite{Agashe:2014kda}. Depending on its charge the W boson decays into either a positive lepton and a neutrino or a negative lepton and an anti-neutrino as depicted in the Feynman diagrams below (Fig. \ref{fig:feynmw+} and \ref{fig:feynmw-}). Similar to the Z, the W bosons have a very short half life of $\tau = 1/\Gamma\cong{ 10 }^{ -25 }sec$.
+
+\begin{figure}
+\centering
+\includegraphics[height=2.5cm]{feynm_W-}
+\caption{Feynman diagram for ${W}^{-}$ decay}
+\label{fig:feynmw-}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=2.5cm]{feynm_W+}
+\caption{Feynman diagram for ${W}^{+}$ decay}
+\label{fig:feynmw+}
+\end{figure}
+
+Contrarily to the Z analysis, no invariant mass histograms can be obtained from the W analysis since only one lepton can be detected and measured in the final state whilst the neutrino escapes the detectors without measurement. Hence, the only way to approximate the momentum of the neutrino is to attribute all the $\cancel{\it{E}}_{T}$ to the neutrino and based on this assumption the ${m}_{t}(W)$ can be calculated.
+
+For the single W analysis the following search criteria were employed:
+\begin{itemize}
+\item Exactly one good lepton with ${p}_{T} > 25$ GeV
+\item $\cancel{\it{E}}_{T} > 30$ GeV 
+\item ${m}_{t}(W) > 30$ GeV
+\end{itemize}
+
+The obtained histogram of ${m}_{t}$ is shown in Fig. \ref{fig:mtw} and the gaussian fit shows a clear peak close to the W mass given in the literature. Fig. \ref{fig:mtwall} shows the W analysis results that was obtained from all events and visualizes the accuracy of the MC simulation when overlayed with the actual data from the E$\gamma$-channel. Furthermore, it demonstrates that single top decay is often misinterpreted as the decay of a W boson.
+
+\begin{figure}
+\centering
+\includegraphics[height=4cm]{W_rtm_fit}
+\caption{Histogram of ${m}_{t}$ for the W decay}
+\label{fig:mtw}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=7cm]{ee_rtmw_with_dataegamma}
+\caption{Distribution of ${m}_{t}$ over all events}
+\label{fig:mtwall}
+\end{figure}
+
+The $\cancel{\it{E}}_{T}$ histogram is shown in Fig. \ref{fig:mtewall} and allows for the same conclusions regarding the single top decay and the accuracy of the MC simulations as Fig. \ref{fig:mtwall}. In contrast to the Z decay, the $\cancel{\it{E}}_{T}$ is considered 'real' since the undetectable neutrino in the final state carries energy.
+
+\begin{figure}
+\centering
+\includegraphics[height=4cm]{ee_mtew_with_dataegamma}
+\caption{Missing transverse energy for the W process}
+\label{fig:mtewall}
+\end{figure}
+
+%% MARK END
+
+%% MARK START
+\subsection{Z' search}
+
+
+%% MARK END
 
 %\subsection{Formulas}
 %
@@ -496,200 +542,6 @@ The number of jets were also plotted, and resulted in a very low number which ca
 %corresponding author.
 %\end{itemize}
 \pagebreak
-\newpage
-\section{Appendix}
-
-\subsection{Code Template}
-%% DHRUVA BEGIN
-Most of the code produced are modifications to the original treelooper.cxx file, which runs the analysis. As such, most of the body of code is repeated among different analyses, with the only changes being within an iterative loop that runs over the data set. For the sake of brevity, we will present the body of code without the for loop in this section, and only the for loops for the analyses on the following pages.
-
-\fontsize{7}{5}\selectfont
-\begin{verbatim}
-#define TreeLooper_cxx
-
-#include "TCanvas.h"
-#include "TreeLooper.h"
-#include "TLeaf.h"
-#include <TROOT.h>
-#include <TChain.h>
-#include <TSystem.h>
-#include <TString.h>
-#include <TFile.h>
-#include <string>
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <sstream>
-
-#include "TTree.h"
-#include "TBranch.h"
-#include "TVector.h"
-#include "TH2I.h"
-#include "TMath.h"
-#include "TPaletteAxis.h"
-#include <iomanip>
-#include "TError.h"
-#include "TLorentzVector.h"
-//using namespace ROOT::Math;
-
-
-using namespace std;
-
-void TreeLooper::Loop(char* inputName, char* outputName)
-{
-	// The Begin() function is called at the start of the query.
-	// When running with PROOF Begin() is only called on the client.
-	// The tree argument is deprecated (on PROOF 0 is passed).
-
-	string outputname="histos_";
-	outputname.append(outputName);
-	outputname.append(".root");
-
-	std::cout<<"Set up output file to save histograms in"<<endl;
-	f= new TFile(outputname.c_str(),"RECREATE");
-
-	std::cout<<"Declare histograms"<<endl;
-	setuphisto(m_myHisto1,"MyInvariantMassHisto",40,0.,400.); 
-    // this is where we set up the histograms	
-	setuphisto(m_myHisto2,"MissingTransverseEnergy",20,0.,400.);
-	//the arguments are setuphisto(pointer, histogram name, 
-    number of bins, lower X-value, upper x-value)
-	setuphisto(m_myHisto3,"NumberOfJets",20,0.,20.);
-    setuphisto(m_myHisto4,"Mt",40,0.,400.); // Mt graph	
-	
-
-	TChain::SetMaxTreeSize(19000000000);
-	TTree::SetMaxTreeSize(19000000000);
-
-	TChain *chain = new TChain("mini","");
-
-	chain->Add(inputName);
-
-	std::cout<<"Set up all branches in the tree"<<endl;
-	Init(chain);
-
-	Long64_t nentries = fChain->GetEntries();
-	std::cout<<"number of entries in the tree= "<<nentries<<endl;
-	
-	
-
-
-------------------------ANALYSIS GOES HERE------------------------
-
-
-
-
-
-std::cout<<"done with looping, just need to save histograms"<<endl;
-	
-	f->Write();
-	std::cout<<"Finished"<<endl;
-
-}
-void TreeLooper::setuphisto(TH1D*& histo, const char* name, int nbins,
-double xlow, double xhigh){
-	histo=new TH1D(name,name,nbins,xlow,xhigh);
-	histo->Sumw2();
-	histo->SetDirectory(f);
-	std::cout<<"Registering histo... "<<name<<endl;
-}
-
-
-int main(int argc,char* argv[]) {
-	if(argc!=0){
-		std::cout<<"Running over file " <<argv[1]<<endl;
-		if(argc==3){
-		TreeLooper elephant;
-		elephant.Loop(argv[1],argv[2]);
-		}
-	}
-	return 0;
-}
-\end{verbatim}
-%% DHRUVA END
-
-\subsection{WZ analysis}
-
-\fontsize{12}{10}\selectfont
-The code for the WZ analysis is presented here. For those unfamiliar to the syntax of C++, any line following a "//" is a comment.
-\fontsize{7}{5}\selectfont
-\begin{verbatim}
-for(Long64_t jentry=0; jentry<nentries; jentry++) { // begin event loop
-		fChain->GetEntry(jentry);
-		if(jentry%10000==0) {std::cout<<"Processed "<<jentry<<" events "<<std::endl;}
-		//Reject events that do not pass the GRL (important for data) or that don't have a good reconstructed vertex
-		if(!passGRL || !hasGoodVertex){continue;}
-		
-		TLorentzVector l1,l2,l3; 
-        //Declares three lorentz vectors for each of the characteristic leptons in the decay
-
-		//Selects events that pass the trigger, have three leptons which are all electrons 
-        and all have momenta above 25 GeV 
-		if(trigE && lep_n==3 && lep_pt[0]>25000. && lep_pt[1]>25000. && lep_pt[2]>25000. 
-        && abs(lep_type[0])==11 && abs(lep_type[1]==11) && abs(lep_type[2]==11)){
-		        
-
-        //The following three if statements go through each combinations of two 
-        oppositely charged leptons to see which has an invariant mass closest to
-        the Z mass. The two leptons with the closest invariant mass are then 
-        assumed to have been produced by the Z boson, and the remaining lepton
-        is assumed to be have been produced by the W boson.
-			mlp=0.0; 
-                        if(int(lep_charge[0]+lep_charge[1])==0){
-                                l1.SetPtEtaPhiE(lep_pt[0],lep_eta[0],lep_phi[0],lep_E[0]);
-				l2.SetPtEtaPhiE(lep_pt[1],lep_eta[1],lep_phi[1],lep_E[1]);
-                                l3.SetPtEtaPhiE(lep_pt[2],lep_eta[2],lep_phi[2],lep_E[2]);
-                                mlp = (l1+l2).M();
-                                elpt = lep_pt[2];
-                                elphi = lep_phi[2];
-                        }
-                        if(int(lep_charge[0]+lep_charge[2])==0) {
-                                l1.SetPtEtaPhiE(lep_pt[0],lep_eta[0],lep_phi[0],lep_E[0]);
-				l2.SetPtEtaPhiE(lep_pt[2],lep_eta[2],lep_phi[2],lep_E[2]);
-                                l3.SetPtEtaPhiE(lep_pt[1],lep_eta[1],lep_phi[1],lep_E[1]);
-				if((fabs((l1+l2).M()/1000.-91.1876)<fabs(mlp-91.1876))){
-                                    mlp = (l1+l2).M();
-                                    elpt = lep_pt[1];
-                                    elphi = lep_phi[1];
-				}
-                        }
-
-                        if(int(lep_charge[1]+lep_charge[2])==0) {
-                                l1.SetPtEtaPhiE(lep_pt[1],lep_eta[1],lep_phi[1],lep_E[1]);
-				l2.SetPtEtaPhiE(lep_pt[2],lep_eta[2],lep_phi[2],lep_E[2]);
-                                l3.SetPtEtaPhiE(lep_pt[0],lep_eta[0],lep_phi[0],lep_E[0]);
-				if((fabs((l1+l2).M()/1000.-91.1876)<fabs(mlp-91.1876))){
-                                    mlp = (l1+l2).M();
-                                    elpt = lep_pt[0];
-                                    elphi = lep_phi[0];
-                                }
-                        }
-
-                        //The following equation calculates the reconstructed mass using
-                        missing energy values and the mass of the lepton produced by the W. 
-                        Wrm = sqrt(2*elpt*met_et*(1-cos(fabs(elphi - met_phi))))/1000.;
-
-
-                        //If the lepton pair mass is less than 10 GeV away from the Z 
-                        mass and the reconstruced W mass is less than 30 GeV, then 
-                        the event is recognizes as a ZW event, and is recorded in 
-                        the histograms. 
-                        if(fabs(mlp/1000.-91.1876)<10. && (Wrm > 30.)) {
-				m_myHisto1->Fill(mlp/1000.,mcWeight*scaleFactor_PILEUP*scaleFactor_ELE*scaleFactor_TRIGGER);	
-				m_myHisto2->Fill(met_et/1000.,mcWeight*scaleFactor_PILEUP*scaleFactor_ELE*scaleFactor_TRIGGER);	
-				m_myHisto3->Fill(jet_n,mcWeight*scaleFactor_PILEUP*scaleFactor_ELE*scaleFactor_TRIGGER);
-				m_myHisto4->Fill(Wrm,mcWeight*scaleFactor_PILEUP*scaleFactor_ELE*scaleFactor_TRIGGER);
-
-	
-			}
-		}
-
-		l1.Delete();
-		l2.Delete();
-		l3.Delete();
-	}
-    
-\end{verbatim}
 \bibliographystyle{apacite}
 \bibliography{bookchapter}
 
