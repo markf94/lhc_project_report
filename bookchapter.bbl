@@ -73,6 +73,32 @@ Griffiths, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hayden%
+, Brock%
+\BCBL {}\ \BBA {} Willis%
+}{%
+Hayden%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+hayden2013z}
+\APACinsertmetastar {%
+hayden2013z}%
+\begin{APACrefauthors}%
+Hayden, D.%
+, Brock, R.%
+\BCBL {}\ \BBA {} Willis, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Z prime: a story} {Z prime: a story}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1308.5874}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Helliwell%
 }{%
 Helliwell%

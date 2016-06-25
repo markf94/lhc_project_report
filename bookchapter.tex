@@ -20,14 +20,38 @@
 
 \usepackage{amssymb}
 \usepackage{apacite}
+\usepackage{caption}
 \usepackage{feynmp}
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{xfrac}
+\usepackage{enumitem}
 \DeclareGraphicsRule{*}{mps}{*}{}
 \usepackage[compat=1.1.0]{tikz-feynman}
 
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
-\usepackage{parskip}
 \usepackage{cancel}
+\usepackage[intlimits]{amsmath} % Puts the limits of integrals on top and bottom
+\usepackage{amsxtra}     % Use various AMS packages
+%\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}    % Add some packages for figures. Read epslatex.pdf on ctan.tug.org
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{epsfig}
+%\usepackage{subcaption}   % To make subfigures. Read subfigure.pdf on ctan.tug.org
+\usepackage{float}
+
+\newcommand{\sun}{\ensuremath{\odot}} % sun symbol is \sun
+\newcommand{\metrel}{$E_{\text T}^{\text {miss,rel}}$}
+\newcommand{\dileptonmass}{$m_{\ell \ell}$}
+\newcommand{\mttwo}{$m_{\text{T2}}$}
+\newcommand{\invfb}{fb\textsuperscript{-1}}
+\newcommand{\lumi}{$\int \mathcal{L} \, \mathrm{dt}$}
+\newcommand{\met}{$E_{\text T}^{\text {miss}}$}
 
 \usepackage{url}
 \urldef{\mailsa}\path|{a.garayjalloh, d.gowdastorz, |
@@ -390,6 +414,47 @@ The $\cancel{\it{E}}_{T}$ histogram is shown in Fig. \ref{fig:mtewall} and allow
 %% MARK START
 \subsection{Z' search}
 
+The Z' is a new heavy vector boson predicted by many theories that are trying to extend the current SM such as the Sequential Standard Model (SSM) or the ${E}_{6}$ Grand Unified Theory (GUT) model. Based on these models the Z' is expected to have the same couplings as the lighter ${Z}^{0}$ but with a much larger mass in the TeV region. The discovery of a new heavy vector boson is very likely to be one of the first signals for new physics at higher centre-of-mass energies at the LHC. This is due to the fact, that vector bosons generally have high branching fractions for clean decay modes such as leptonic decays and additionally tend to have higher cross-sections than other SM processes. \cite{hayden2013z}\linebreak
+\linebreak
+Fig. \ref{fig:feynmzprime} shows the Z' decay diagrams which is considered for this search: first decay into a $t$$\overline t$ pair that further decays into a $b$$\overline b$ pair and two W bosons. Subsequently the W bosons decay as well - one hadronically and one leptonically.
+
+\begin{figure}
+\centering
+\includegraphics[height=5cm]{feynm_ZPrime}
+\caption{Feynman diagram for Z' decay}
+\label{fig:feynmzprime}
+\end{figure}
+
+For this paper the Z' was searched in the semileptonic top pair channel based on the following search criteria:
+\begin{itemize}
+\item Exactly one good lepton with ${p}_{T} > 25$ GeV
+\item Minimum 4 good jets of which two have to be b-tagged
+\item $\cancel{\it{E}}_{T} > 30$ GeV 
+\item ${m}_{t}(W) + \cancel{\it{E}}_{T} > 30$ GeV
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\captionsetup{width=0.8\textwidth}
+\begin{tabular}{|l|llllll}
+\hline
+Signal models     & \multicolumn{1}{l|}{400-200} & \multicolumn{1}{l|}{600-100} & \multicolumn{1}{l|}{400-200} & \multicolumn{1}{l|}{600-100} & \multicolumn{1}{l|}{400-200} & \multicolumn{1}{l|}{600-100} \\ \hline
+\hspace{5mm} \lumi     & \multicolumn{2}{c|}{3.2 \invfb}                                                     & \multicolumn{2}{c|}{9.6 \invfb}                                                     & \multicolumn{2}{c|}{19.2 \invfb}                                                    \\ \hline 
+ \mttwo \, cut [GeV]            & \multicolumn{6}{c|}{\textbf{SF channel}}                                                                                                                                                                                                                   \\ \hline
+$>80$  & \multicolumn{1}{l|}{1.01}               & \multicolumn{1}{l|}{0.26}               & \multicolumn{1}{l|}{1.74}               & \multicolumn{1}{l|}{0.45}               & \multicolumn{1}{l|}{2.46}               & \multicolumn{1}{l|}{0.64}               \\ \hline
+$>100$ & \multicolumn{1}{l|}{1.47}               & \multicolumn{1}{l|}{0.50}               & \multicolumn{1}{l|}{2.56}               & \multicolumn{1}{l|}{0.86}               & \multicolumn{1}{l|}{3.62}               & \multicolumn{1}{l|}{1.22}               \\ \hline
+$>120$  & \multicolumn{1}{l|}{1.27}               & \multicolumn{1}{l|}{0.61}               & \multicolumn{1}{l|}{2.19}               & \multicolumn{1}{l|}{1.06}               & \multicolumn{1}{l|}{3.09}               & \multicolumn{1}{l|}{1.5}                \\ \hline
+                  & \multicolumn{6}{c|}{\textbf{DF channel}}                                                                                                                                                                                                                  \\ \hline
+$>80$   & \multicolumn{1}{l|}{1.12}               & \multicolumn{1}{l|}{0.31}               & \multicolumn{1}{l|}{1.95}               & \multicolumn{1}{l|}{0.54}               & \multicolumn{1}{l|}{2.76}               & \multicolumn{1}{l|}{0.76}               \\ \hline
+$>100$   & \multicolumn{1}{l|}{2.10}               & \multicolumn{1}{l|}{0.75}               & \multicolumn{1}{l|}{3.64}               & \multicolumn{1}{l|}{1.30}               & \multicolumn{1}{l|}{5.15}               & \multicolumn{1}{l|}{1.83}               \\ \hline
+$>120$    & \multicolumn{1}{l|}{2.10}               & \multicolumn{1}{l|}{1.07}               & \multicolumn{1}{l|}{3.65}               & \multicolumn{1}{l|}{1.86}               & \multicolumn{1}{l|}{5.16}               & \multicolumn{1}{l|}{2.63}               \\ \hline
+\end{tabular}
+\caption{Significance values ($S/\sqrt{B}$) for the SF and DF channel signal models with various cuts on \mttwo \, at increasing integrated luminosities. Cuts include $Z$ veto (only for SF) and no jets are allowed.}
+\label{tab:SF_score}
+\end{table}
+
+
+
 
 %% MARK END
 
@@ -541,7 +606,7 @@ The $\cancel{\it{E}}_{T}$ histogram is shown in Fig. \ref{fig:mtewall} and allow
 %\item A readme giving the name and email address of the
 %corresponding author.
 %\end{itemize}
-\pagebreak
+
 \bibliographystyle{apacite}
 \bibliography{bookchapter}
 
